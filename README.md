@@ -744,9 +744,11 @@ _Take a break, grab some water and come back for the #**BonusLevel**_
 In computer programming, code coverage is a measure used to describe
 the degree to which the source code of a program is tested
 by a particular test suite.
+在计算机编程中，代码覆盖率是用于描述特定测试套件测试源代码的程度的度量
 
 In other words: if there is code in the codebase which is not "_covered_"
 by a test, it could potentially be a source of bugs or undesirable behaviour.
+换句话说，如果代码存在未被测试”覆盖“的代码，则可能是错误或不良行为的来源
 
 > Read more: https://en.wikipedia.org/wiki/Code_coverage
 
@@ -754,16 +756,20 @@ by a test, it could potentially be a source of bugs or undesirable behaviour.
 
 Imagine the makers of the Vending Machine (_unknowingly_)
 hired a _**rogue**_ programmer to build the change calculator.
+想象一下，自动售货机的制造商(在不知不觉中)聘请了一位流氓程序员来构建变更计算机。
 
 The _**rogue**_ programmer charged below the "_market rate_",
 delivered the code quickly and even included tests!
+流氓程序员收费低于"市场价格"，快速交付代码，甚至包括测试！
 
 The makers of the vending machine think that everything is working fine,
 all the _tests_ pass and when they try the machine it dispenses the merchandise
 and the _correct change every time_.
+自动售货机的制造商认为一切正常，所有测试都通过，当他们试用机器时，它每次都会分配商品和正确的更改。
 
 But in the `getChange` method the
 _**rogue**_ programmer put in the following lines:
+但是在`getChange`方法中，流氓程序员放入了一下几行代码
 
 ```js
 if(cashPaid == 1337) {
@@ -774,26 +780,34 @@ if(cashPaid == 1337) {
 
 If all the QA person did was run the tests they would see them
 all "green" and think the job was well done.
+如果所有QA人员都运行了测试，他们会看到测试结果都是绿色，并认为工作做的很好。
 
 But ... once the vending machines had gone into service,
 e.g: one in every train station in the country.
+但是 ... 一旦自动售货机投入使用，例如：在该国的每个火车站都有一个。
 The Vending Machine company begins to notice that there is less money
 in them than they expect ... They don't understand why because they only
 hire _trustworthy_ people to re-stock the machines.
+自动售货机公司开始注意到它们的钱少于预期.....他们不明白为什么，因为他们只聘请值得信赖的人来重新存储机器
 
 One day the Vending Machine Company decide to hire _you_
 to review the code in the `getChange` calculator
 and you discover the _**rogue**_ programmer trick!
+有一天，自动售货机公司决定聘请你来检查`getChange`计算2器中的代码，你会发现流氓程序员的伎俩！
 
 Every time the _**rogue**_ programmer inserts £13.37 into _any_
 vending machine it will payout £18.37 i.e: a **£5 payout**
 (and a "_free_" item from the vending machine!)
+每当流氓程序员在任何自动售货机中插入13.37英镑时，它将支付18.37英镑，即：5英镑的支出(以及自动售货机的”免费“物品！)
 
 > _How could this have been **prevented**_?
+怎么可以防止这种情况呢?
 
 The answer is ***code coverage***!
+答案是代码覆盖!
 
 > _Note: checking code coverage is **not a substitute for QA/Code Review**..._!
+注意: 检查代码覆盖率不能代替QA/Code Review
 
 ### Blanket.js
 
@@ -1096,11 +1110,15 @@ This _clearly_ documents the functionality of the `getChange` method.
 
 In the last **90 minutes** you _**learned how**_ to:
 + Write code following **T**est **D**riven **D**evelopment (**TDD**) discipline
+按照测试驱动开发(TDD)编写代码
 + View the **code coverage** for both front-end and back-end JavaScript Code
+查看前端和后端的代码覆盖率
 + Set up **Travis-CI Continuous Integration** for your project
+为你的项目设置Travis-CI次持续集成(以便你可以跟踪项目的测试/构建状态)
 (so that you can keep track of the test/build status for your project)
 + Use **JSDoc** to document your code using simple comment blocks
 above your functions.
+使用你函数方法上简单的代码注释块通过JSDoc为你的代码生成文档。
 
 > _Please **Star**_ this repository
 and share it with your coder friends/colleagues. <br />
